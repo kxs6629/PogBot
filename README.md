@@ -11,3 +11,8 @@ my understanding of these two concepts in my free time.
 ## Work In Progress
 * Keep count of each type of server emoji sent in chat, in this case a pogChamp emote
 * Display who sent the last matching emoji in the chat
+* Clean up code 
+
+## Future development
+* Dynamically create a list of emojis to track using that Guild's list
+* Data integrity if the bot is ever restarted or shuts down

@@ -63,7 +63,12 @@ client.on("message", function(message){
 		}
 	}
 	if(!message.content.startsWith(prefix)){
-		if(message.content.includes("<:pogChamp:762885350548045875>")){
+		if(
+			message.content.includes("<:pogChamp:762885350548045875>") ||
+			message.content.includes("<:1635_WeirdChamp:717936774315376772>") ||
+			message.content.includes("<:poggers:759138511982559283>") ||
+			message.content.includes("<:576614562598748213:759138845610213376>")
+		){
 			champ++;
 			lastChamp = message.author.id;
 			console.log(lastChamp+" said the funny word");
