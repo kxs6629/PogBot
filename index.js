@@ -54,7 +54,7 @@ client.on("message", function(message){
 				message.reply("not yet buddy");
 			}
 			else{
-				message.reply(":eyes: has been sent "+champ+" times \n Last pog was sent by: "+lastChamp);
+				message.reply("\n<:pogChamp:762885350548045875> has been sent "+champ+" times. Last sent by: "+"<@"+lastChamp+">");
 			}
 		}
 
@@ -63,12 +63,10 @@ client.on("message", function(message){
 		}
 	}
 	if(!message.content.startsWith(prefix)){
-		if(message.content.includes("test")){
+		if(message.content.includes("<:pogChamp:762885350548045875>")){
 			champ++;
-			lastChamp = message.author.username;
+			lastChamp = message.author.id;
 			console.log(lastChamp+" said the funny word");
-		}
-		if(message.content.includes(Discord.Emoji)){
 		}
 	}
 });
