@@ -1,6 +1,9 @@
 # PogBot
 Discord bot that keeps tracks of certain messages and who sent the most recent one
 
+## Additional Notes
+To get this bot working locally, you will have to create a config.json file that contains your bot token. No config file will be present here to maintian security of keys
+
 ## Purpose
 This idea started off as a meme with my friends but it also allowed me to experiment with discord bots and NodeJS. This side project is intended to help strengthen
 my understanding of these two concepts in my free time.
