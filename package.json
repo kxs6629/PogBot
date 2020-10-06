@@ -1,0 +1,14 @@
+{
+  "name": "pogbot",
+  "version": "1.0.0",
+  "description": "Discord bot that monitors messages to and displays count of how many times an emote has been sent in the chat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kenny Scott",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  }
+}
