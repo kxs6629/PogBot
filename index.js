@@ -52,8 +52,14 @@ client.on("message", function(message){
 		else if(command === "pog"){
 			if(champ == 0){
 				message.reply("not yet buddy");
+				Object.keys(pogType).forEach(function(key) {
+					console.log(key + " " + pogType[key]);
+				 });
 			}
 			else{
+				pogType.forEach(element => {
+					console.log(element);
+				});
 				message.reply("\n<:pogChamp:762885350548045875> has been sent "+champ+" times. Last sent by: "+"<@"+lastChamp+">");
 			}
 		}
@@ -63,16 +69,31 @@ client.on("message", function(message){
 		}
 	}
 	if(!message.content.startsWith(prefix)){
-		if(
-			message.content.includes("<:pogChamp:762885350548045875>") ||
-			message.content.includes("<:1635_WeirdChamp:717936774315376772>") ||
-			message.content.includes("<:poggers:759138511982559283>") ||
-			message.content.includes("<:576614562598748213:759138845610213376>")
-		){
-			champ++;
-			lastChamp = message.author.id;
-			console.log(lastChamp+" said the funny word");
+		let msg = message.content;
+		switch(msg.includes()){
+			case "<:pogChamp:762885350548045875>":
+				champ++;
+				break;
+			case ":1635_WeirdChamp:717936774315376772>":
+				weird++;
+				break;
+			case "<:poggers:759138511982559283>":
+				console.log("New Pog");
+				break;
+			default:
+				console.log("No PogChamp detected");
+				console.log(msg.includes());
 		}
+		// if(
+		// 	message.content.includes("<:pogChamp:762885350548045875>") ||
+		// 	message.content.includes("<:1635_WeirdChamp:717936774315376772>") ||
+		// 	message.content.includes("<:poggers:759138511982559283>") ||
+		// 	message.content.includes("<:576614562598748213:759138845610213376>")
+		// ){
+		// 	champ++;
+		// 	lastChamp = message.author.id;
+		// 	console.log(lastChamp+" said the funny word");
+		// }
 	}
 });
 
